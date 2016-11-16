@@ -44,6 +44,9 @@ module.exports =
     if config.ssl
       params.push 'ssl=true'
 
+    if config.authSource
+      params.push 'authSource=' + config.authSource
+
     if params.length > 0
       s += '?' + params.join('&')
 
